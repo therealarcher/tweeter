@@ -3,7 +3,11 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+
+* {
+  border:2px dotted red;
+}
+ html {
   box-sizing: border-box;
 }
 
@@ -21,6 +25,7 @@ body {
   font-family: Source Sans Pro, sans-serif;
   font-size: 24px;
   overflow: auto;
+  margin-bottom: 1000px;
 }
 
 main {
@@ -32,18 +37,3 @@ main {
   position: relative;
   
 }
-
-/* .content-container {
-  width: 90%;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.text-container {
-
-} */
-
