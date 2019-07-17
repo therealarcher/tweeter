@@ -1,8 +1,34 @@
-/* .old-tweets header{
-  background-color: purple;
+.tweets:hover {
+  box-shadow: 10px 10px #888888;
+}
+
+.tweets {
+  background-color: #f4f1ec;
+  padding-top: 4em;
+}
+
+.tweets header {
+  /* background-color: #f4f1ec; */
 
 }
 
-.old-tweets img {
-  position:'left';
-} */
+.top-of-tweet {
+  display: flex;
+  justify-content: space-between;
+  /* position:'left'; */
+}
+.tweets article {
+  border: 2px black;
+}
+
+.tweets .tweet-text {
+  background-color: #f4f1ec;
+  width: 100%;
+  border: none none 20px
+}
+
+.days-ago {
+  font-size: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}

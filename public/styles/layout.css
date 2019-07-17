@@ -4,9 +4,9 @@
  * Do not modify these two selectors, please
  */
 
-* {
+/* * {
   border:2px dotted red;
-}
+} */
  html {
   box-sizing: border-box;
 }
