@@ -18,7 +18,11 @@
   /* position:'left'; */
 }
 .tweets article {
-  border: 2px black;
+  border: 0.1rem solid black;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 4px 4px #888888;
 }
 
 .tweets .tweet-text {

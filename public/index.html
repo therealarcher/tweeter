@@ -44,9 +44,9 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
-            <form action="/tweets" method="post">
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="TWEET">
+            <form>
+              <textarea id="tweet-string" name="text" placeholder="What are you humming about?"></textarea>
+              <button id="submit-button" type="submit">TWEET</button>
               <span class="counter">140</span>
             </form>
         </section>
