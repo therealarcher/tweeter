@@ -62,7 +62,7 @@ const createTweetElement = function (obj) {
       <span class='handle'>${obj.user.handle}</span>
     </header>
     <p>
-        <div class="tweet-text"> ${obj.content.text} </div>
+        <div class="tweet-text"> ${escape(obj.content.text)} </div>
     </p>
     <footer>
       <span class="days-ago">${Date(obj.created_at)} </span>
@@ -83,6 +83,12 @@ const renderTweets = function (tweets) {
     const rendered = createTweetElement(post);
     container.prepend(rendered)
   }
+}
+
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
 
 
