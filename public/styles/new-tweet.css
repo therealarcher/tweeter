@@ -37,3 +37,8 @@
 .counter.error {
   color: red
 }
+
+#error-msg {
+  display:none;
+  border: 2px solid red;
+}

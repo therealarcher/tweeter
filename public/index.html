@@ -29,6 +29,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <span>write a new tweet</span>
+      <!-- <button id="slide-button"></button> -->
+      <input type="image" id="arrow" src="/images/double-arrow.png"/>
     </nav>
 
     <header class='page-header'>
@@ -43,7 +46,8 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section class="new-tweet">
+      <section id="tweet-slide" class="new-tweet">
+          <div id="error-msg"></div>
             <form>
               <textarea id="tweet-string" name="text" placeholder="What are you humming about?"></textarea>
               <button id="submit-button" type="submit">TWEET</button>

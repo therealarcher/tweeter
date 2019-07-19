@@ -10,18 +10,25 @@
 $(document).ready(function() {
   addSubmitHandler();
   loadTweets();
+  $("#arrow").click(() => $("#tweet-slide").slideToggle());
 });
 
+// const arrowSlide = $("#arrow").click(function() {
+//   $("#tweet-slide").slideToggle();
+// });
+
 const addSubmitHandler = function() {
+  
   $(".new-tweet form").on('submit', function (event) {
     event.preventDefault();
     if ($('#tweet-string').val() === "" || $('#tweet-string').val() === null) {
-      alert("Please enter a value");
+      errorMsg("Please enter a tweet");
       return;
     } else if ($('#tweet-string').val().length > 140) {
-      alert("Maximum character length is 140, please reduce and resubmit");
+      errorMsg("Maximum character length is 140, please reduce and resubmit");
       return;
     } else {
+      $("#error-msg").empty().hide();
       console.log('performing ajax call...');      
       $.ajax('/tweets', {method: 'POST', data: $(this).serialize()})
       .done(function (response) {
@@ -48,39 +55,39 @@ const loadTweets = function () {
       console.log('Success with Get: ', response);
       renderTweets(response);
     });
-  // });
-};
-
-const createTweetElement = function (obj) {
-  // const $tweet = $("<article>").addClass("content"); //check
-  //console.log($tweet);
-  return `
-  <article>
+    // });
+  };
+  
+  const createTweetElement = function (obj) {
+    // const $tweet = $("<article>").addClass("content"); //check
+    //console.log($tweet);
+    return `
+    <article>
     <header class="top-of-tweet">
-      <img class="avatar" src=${obj.user.avatars}>
-      <span class='userName'>${obj.user.name}</span>
-      <span class='handle'>${obj.user.handle}</span>
+    <img class="avatar" src=${obj.user.avatars}>
+    <span class='userName'>${obj.user.name}</span>
+    <span class='handle'>${obj.user.handle}</span>
     </header>
     <p>
-        <div class="tweet-text"> ${escape(obj.content.text)} </div>
+    <div class="tweet-text"> ${escape(obj.content.text)} </div>
     </p>
     <footer>
-      <span class="days-ago">${Date(obj.created_at)} </span>
+    <span class="days-ago">${Date(obj.created_at)} </span>
     </footer>
+    
+    </article>
+    `;
+    // console.log($('#tweet-container').append(markUp));
+    // $('#tweet-container').append(markUp);
+    
+  }
   
-  </article>
-`;
-  // console.log($('#tweet-container').append(markUp));
-  // $('#tweet-container').append(markUp);
-
-}
-
-const renderTweets = function (tweets) {
-  const container = $('#tweet-container');
-  container.empty();
-  for (let post of tweets) {
-    //console.log(post)
-    const rendered = createTweetElement(post);
+  const renderTweets = function (tweets) {
+    const container = $('#tweet-container');
+    container.empty();
+    for (let post of tweets) {
+      //console.log(post)
+      const rendered = createTweetElement(post);
     container.prepend(rendered)
   }
 }
@@ -91,15 +98,18 @@ const escape =  function(str) {
   return div.innerHTML;
 }
 
+const errorMsg = function(msg) {
+  $("#error-msg").text(msg).show();
+}
 
 // const tweetData = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
+  //   {
+    //     "user": {
+      //       "name": "Newton",
+      //       "avatars": "https://i.imgur.com/73hZDYK.png"
+      //       ,
+      //       "handle": "@SirIsaac"
+      //     },
 //     "content": {
 //       "text": "If I have seen further it is by standing on the shoulders of giants"
 //     },
