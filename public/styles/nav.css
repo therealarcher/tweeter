@@ -18,10 +18,26 @@ nav section {
 #title {
   font-size: 28pt;
 }
+
 #arrow {
   width: 30px;
   float: right;
   margin-right: 5em;
+  transform: translate(50%, 0);
+  animation: animate 1.5s infinite linear;
+}
 
-
+@keyframes animate {
+  0% {
+    transform: translate(50%, 0);
+  }
+  25% {
+    transform: translate(50%, 10%);
+  }
+  50% {
+    transform: translate(50%, 0);
+  }
+  75% {
+    transform: translate(50%, -10%);
+  }
 }

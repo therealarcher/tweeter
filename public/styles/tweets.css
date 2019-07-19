@@ -1,6 +1,4 @@
-.tweets:hover {
-  box-shadow: 10px 10px #888888;
-}
+
 
 .tweets {
   background-color: #f4f1ec;
@@ -24,6 +22,9 @@
   margin-bottom: 2rem;
   box-shadow: 4px 4px #888888;
   word-wrap: break-word;
+}
+.tweets article:hover {
+  box-shadow: 10px 10px #888888
 }
 
 .tweets .tweet-text {

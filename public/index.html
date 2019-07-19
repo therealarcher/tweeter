@@ -17,6 +17,7 @@
     
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -38,11 +39,11 @@
 
     <header class='page-header'>
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img src="/images/bearded-man.png"> 
       </div>
       <br>
       <div>
-          <h2>Your Name</h2>
+          <h2>Jonathan Archer</h2>
       </div>
     </header>
 
@@ -51,7 +52,7 @@
       <section id="tweet-slide" class="new-tweet">
           <div id="error-msg"></div>
             <form>
-              <textarea id="tweet-string" name="text" placeholder="What are you humming about?"></textarea>
+              <textarea id="tweet-string" name="text" placeholder="What's on your mind?" autofocus></textarea>
               <button id="submit-button" type="submit">TWEET</button>
               <span class="counter">140</span>
             </form>

@@ -64,15 +64,17 @@ const loadTweets = function () {
     return `
     <article>
     <header class="top-of-tweet">
+    <div class="avatar-name">
     <img class="avatar" src=${obj.user.avatars}>
     <span class='userName'>${obj.user.name}</span>
+    </div>
     <span class='handle'>${obj.user.handle}</span>
     </header>
     <p>
     <div class="tweet-text"> ${escape(obj.content.text)} </div>
     </p>
     <footer>
-    <span class="days-ago">${Date(obj.created_at)} </span>
+    <span class="days-ago">${moment(obj.created_at).fromNow()} </span>
     </footer>
     
     </article>
