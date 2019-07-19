@@ -4,6 +4,7 @@
   margin: 0 auto;
   display: block;
   position: relative;
+  display: none;
 }
 
 .new-tweet form {
