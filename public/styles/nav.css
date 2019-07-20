@@ -15,16 +15,27 @@ nav section {
   
 }
 
+nav div img{
+  display: none;
+}
+
+nav div h2 {
+  display: none;
+}
+
 #title {
   font-size: 28pt;
 }
 
 #arrow {
   width: 30px;
-  float: right;
-  margin-right: 5em;
+  /* float: right;
+  margin-right: 5em; */
   transform: translate(50%, 0);
   animation: animate 1.5s infinite linear;
+  position: fixed;
+  top: 60px;
+  right: 9rem;
 }
 
 @keyframes animate {
@@ -40,4 +51,25 @@ nav section {
   75% {
     transform: translate(50%, -10%);
   }
+}
+
+@media only screen and (max-width: 720px) {
+  nav {
+    background-color: #d68000;
+    height: 360px;
+  }
+  
+  nav div img {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  nav div h2 {
+    display: block;
+    text-align: center;
+  }
+
+
 }

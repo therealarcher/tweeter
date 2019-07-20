@@ -33,23 +33,30 @@
         <span id="title">tweeter</span>
         <span>write a new tweet</span>
       </section>
+      <div>
+          <img src="/images/bearded-man.png"> 
+      </div>
+      <div>
+          <h2>Jonathan Archer</h2>
+      </div>
       <!-- <button id="slide-button"></button> -->
       <input type="image" id="arrow" src="/images/double-arrow.png"/>
     </nav>
 
-    <header class='page-header'>
-      <div>
+    <main class="container">
+      <header class='page-header'>
+        <div>
           <img src="/images/bearded-man.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Jonathan Archer</h2>
-      </div>
-    </header>
+        </div>
+        <br>
+        <div>
+            <h2>Jonathan Archer</h2>
+        </div>
+      </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section id="tweet-slide" class="new-tweet">
+      <div class="right-col">
+        <section id="tweet-slide" class="new-tweet">
           <div id="error-msg"></div>
             <form>
               <textarea id="tweet-string" name="text" placeholder="What's on your mind?" autofocus></textarea>
@@ -58,12 +65,9 @@
             </form>
         </section>
         <section id='tweet-container' class="tweets">
-          
+            
         </section>
+      </div>
     </main>
-
-
-    
-
   </body>
 </html>

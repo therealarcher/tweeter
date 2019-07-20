@@ -3,6 +3,7 @@
 .tweets {
   background-color: #f4f1ec;
   padding-top: 4em;
+  /* border: 4px solid green */
 }
 
 .tweets header {
